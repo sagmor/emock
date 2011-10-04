@@ -1,0 +1,15 @@
+{ "author": "Sebastian Gamboa <me@sagmor.com>"
+, "name": "eMock"
+, "description": "eMail Server Mocking"
+, "version": "0.0.0"
+, "repository":
+  { "url": ""
+  }
+, "engines":
+  { "node": "~v0.4.11"
+  }
+, "dependencies":
+  { "smtp": "~> 0.1.4"
+  }
+, "devDependencies": {}
+}
