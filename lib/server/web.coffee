@@ -1,5 +1,7 @@
 restify = require 'restify'
 static = require 'node-static'
+stitch  = require 'stitch'
+
 store = require './stores/nstore'
 
 server = restify.createServer()
@@ -15,6 +17,11 @@ server.get '/emails/:key', (req,res) ->
 server.del '/emails/:key', (req,res) ->
   store.remove req.uriParams.key, (err, email) ->
     res.send 200, email
+
+# Client app server
+package = stitch.createPackage
+  paths: [__dirname + '/../client']
+server.get '/application.js', package.createServer()
 
 # Static files
 file = new static.Server('./public')
