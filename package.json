@@ -11,6 +11,7 @@
 , "dependencies":
   { "coffee-script": ">= 1.1.0"
   , "smtp": "~> 0.1.4"
+  , "nstore": "~> 0.5.1"
   }
 , "devDependencies": {}
 }
