@@ -13,6 +13,7 @@
   , "smtp": "~> 0.1.4"
   , "nstore": "~> 0.5.1"
   , "restify": "~> 0.5.4"
+  , "underscore": "~> 1.2.0"
   }
 , "devDependencies": {}
 }
