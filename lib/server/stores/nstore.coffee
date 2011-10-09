@@ -20,7 +20,7 @@ module.exports =
 
   get: (key, callback) ->
     emails.get key, (err, email, key) ->
-      email.id = key
+      email.id = key if email
       callback err, email
 
   save: (message, callback) ->

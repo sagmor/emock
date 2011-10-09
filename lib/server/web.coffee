@@ -12,7 +12,10 @@ server.get '/emails', (req,res) ->
 
 server.get '/emails/:key', (req,res) ->
   store.get req.uriParams.key, (err,email) ->
-    res.send 200, email
+    if email
+      res.send 200, email
+    else
+      res.send 404, null
 
 server.del '/emails/:key', (req,res) ->
   store.remove req.uriParams.key, (err, email) ->
