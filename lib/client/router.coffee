@@ -1,4 +1,6 @@
 Backbone = require 'backbone'
+Emails = require 'emails'
+Email = require 'email'
 
 class Router extends Backbone.Router
   routes:
@@ -6,9 +8,14 @@ class Router extends Backbone.Router
     "emails/:id": "show"
 
   index: ->
-    console.log "index"
+    emails = new Emails
+    emails.fetch
+      success: console.log emails
 
   show: (id) ->
-    console.log "show", id
+    email = new Email
+      id: id
+    email.fetch
+      success: console.log email
 
 module.exports = Router
