@@ -4,4 +4,5 @@ Router = require 'router'
 
 @router = new Router
 
-Backbone.history.start()
+jQuery ->
+  Backbone.history.start()
